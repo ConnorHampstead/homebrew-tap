@@ -11,7 +11,7 @@ class Rvp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.0.0/rvp_Darwin_x86_64.tar.gz"
-      sha256 "1c6174418f166a06aebecfc385fe69a5973a32f7c77cd5039447d36f0e3fde97"
+      sha256 "53e067a15b5805ef370151311564328b2bc2a6f5d2fd1ed774c65e8e69abd470"
 
       define_method(:install) do
         bin.install "rvp"
@@ -19,7 +19,7 @@ class Rvp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.0.0/rvp_Darwin_arm64.tar.gz"
-      sha256 "916fd2cfca031ff32cf7f056c819d2b6576de477079ad749746138d8f58b5fd7"
+      sha256 "857c07f1dbb942d4ee1b8caf14ea100574421bd20c196739d728348bd398af57"
 
       define_method(:install) do
         bin.install "rvp"
@@ -30,14 +30,14 @@ class Rvp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.0.0/rvp_Linux_x86_64.tar.gz"
-      sha256 "06378e2df02436b43009d133ac50e7cbe147f7687ff0785fc89f6a9ddab2bb54"
+      sha256 "01017b7e606a8e0b7deb42f6037640f77457c8fe287a027382a28de164eca43d"
       define_method(:install) do
         bin.install "rvp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.0.0/rvp_Linux_arm64.tar.gz"
-      sha256 "7d9286511de715ac2fd580022e4664d5b3fbdf2589c805341f1bfa0330cec7e4"
+      sha256 "d30a6d269ed91e3ecaf3bb586c59d4796948dd65ae5bdc5fbb1dc16e205b2303"
       define_method(:install) do
         bin.install "rvp"
       end
