@@ -5,21 +5,21 @@
 class Rvp < Formula
   desc "A noise-reduction engine for Trivy scans using EPSS and VEX."
   homepage "https://github.com/ConnorHampstead/reasonable-vulnerability-processor"
-  version "1.1.0"
+  version "1.1.1"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.0/rvp_Darwin_x86_64.tar.gz"
-      sha256 "45ecb16167139c98fc3884f0d6844089d50df6158ade409a885f7b40140cbc16"
+      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.1/rvp_Darwin_x86_64.tar.gz"
+      sha256 "68928e5ee7b02f320c07a86653c248b82fb174521d042260cf4544bc8ac61d71"
 
       define_method(:install) do
         bin.install "rvp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.0/rvp_Darwin_arm64.tar.gz"
-      sha256 "877562e59b5071116e2359b0c112d55414f7b1a96dd56852a5109339ed969bb1"
+      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.1/rvp_Darwin_arm64.tar.gz"
+      sha256 "67584f131bed75ee7e42620f4236d20df968ef91e21880766d3da29b55f3fb80"
 
       define_method(:install) do
         bin.install "rvp"
@@ -29,15 +29,15 @@ class Rvp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.0/rvp_Linux_x86_64.tar.gz"
-      sha256 "9d1eca5e90ba7aefa1e7686deea5c1fd94cf617f9293430ea09c8de5cfee2291"
+      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.1/rvp_Linux_x86_64.tar.gz"
+      sha256 "53940b7ef1d910c6304543ce5ab0833acd23fbf334e7f74a3cfedbbbb049170d"
       define_method(:install) do
         bin.install "rvp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.0/rvp_Linux_arm64.tar.gz"
-      sha256 "7944d0e687bf142940b80f1a9a7c53571b67656505815fac8f10bfa5e2044238"
+      url "https://github.com/ConnorHampstead/reasonable-vulnerability-processor/releases/download/v1.1.1/rvp_Linux_arm64.tar.gz"
+      sha256 "9dcf15fedb9f89219562f1379a87040e0cd6ab175a3ca303009a3ed2bda40ebf"
       define_method(:install) do
         bin.install "rvp"
       end
